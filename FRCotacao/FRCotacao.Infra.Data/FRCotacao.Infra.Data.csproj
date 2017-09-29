@@ -48,15 +48,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\FRCotacaoContext.cs" />
+    <Compile Include="EntityConfig\UserConfig.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="EntityConfig\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FRCotacao.Model\FRCotacao.Model.csproj">
+      <Project>{9B77D4E5-2833-4ED0-9098-0AE460A06D8B}</Project>
+      <Name>FRCotacao.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
