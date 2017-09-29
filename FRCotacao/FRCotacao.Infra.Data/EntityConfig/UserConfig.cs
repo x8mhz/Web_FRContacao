@@ -8,6 +8,7 @@ namespace FRCotacao.Infra.Data.EntityConfig
         public UserConfig()
         {
             HasKey(p => p.UserId);
+
             Property(p => p.FirstName)
                 .IsRequired()
                 .HasMaxLength(150);
