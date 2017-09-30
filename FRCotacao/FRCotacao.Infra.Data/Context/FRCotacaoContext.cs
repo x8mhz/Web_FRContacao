@@ -1,7 +1,9 @@
-﻿using FRCotacao.Infra.Data.EntityConfig;
+﻿using System;
+using FRCotacao.Infra.Data.EntityConfig;
 using FRCotacao.Model.Entities;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Linq;
 
 namespace FRCotacao.Infra.Data.Context
 {
@@ -34,8 +36,7 @@ namespace FRCotacao.Infra.Data.Context
             modelBuilder.Configurations.Add(new UserConfig());
 
         }
-
-        /*
+        
         public override int SaveChanges()
         {
             foreach (var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("RegisterDate") != null))
@@ -48,10 +49,9 @@ namespace FRCotacao.Infra.Data.Context
                 if (entry.State == EntityState.Modified)
                 {
                     entry.Property("RegisterDate").IsModified = false;
-                }
-                return base.SaveChanges();
+                }             
             }
-        }
-        */
+            return base.SaveChanges();
+        }       
     }
 }

@@ -17,7 +17,7 @@ namespace FRCotacao.Infra.Data.Repositories
 
         public TEntity GetById(int id)
         {
-            throw new NotImplementedException();
+            return new TEntity();
         }
 
         public IEnumerable<TEntity> GetAll()
